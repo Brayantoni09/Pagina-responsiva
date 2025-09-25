@@ -18,14 +18,10 @@ Puedes visualizarlo desde cualquier smartphone o tablet de las siguientes manera
 
 
 1. **En un servidor local** (Apache o Live Server):  
-   - Clona este repositorio:
-     ```bash
-     git clone https://github.com/TU_USUARIO/NOMBRE_DEL_REPOSITORIO.git
-     ```
    - Copia el contenido en `/var/www/html` (Ubuntu/Apache) o usa una extensión como **Live Server** en VS Code.
    - Abre en el navegador móvil la IP del equipo en la red local:
      ```
-     http://IP_DE_TU_SERVIDOR/
+     http://Ip de tu servidor/
      ```
    - Abre el archivo index.html en Google Chrome o Firefox.
 
