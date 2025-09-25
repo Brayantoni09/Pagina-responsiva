@@ -1,0 +1,399 @@
+/* ======== Colores y variables ======== */
+:root {
+  --header-bg: #2563eb;
+  --header-text: #ffffff;
+  --body-bg: #f0f2f5;
+  --card-bg: #ffffff;
+  --text-primary: #1d2a39;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --border-color: #e5eaf1;
+  --max-width: 1100px;
+}
+
+/* ======== Reset y Estilos Base ======== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* CAMBIO 1: Fuente cambiada a Arial */
+  font-family: Arial, Helvetica, sans-serif; 
+  background: var(--body-bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* ======== Encabezado (sin cambios) ======== */
+.site-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(18px, 2.5vw, 24px);
+}
+
+/* ======== Menú de Navegación (sin cambios) ======== */
+.topnav > ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: .5rem;
+}
+
+.topnav a {
+  color: var(--header-text);
+  text-decoration: none;
+  padding: .6rem 1rem;
+  display: block;
+  border-radius: 6px;
+  transition: background-color .3s ease;
+}
+
+.topnav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--card-bg);
+  min-width: 250px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  z-index: 1001;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  display: block;
+  width: 100%;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  color: var(--text-primary);
+  padding: .75rem 1.25rem;
+  width: 100%;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--body-bg);
+  color: var(--accent);
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ======== Contenido Principal ======== */
+.main {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.content-section {
+  display: none; 
+}
+
+.content-section.visible {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Estilos de Tarjetas --- */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.25rem 2.5rem; /* Aumentado padding horizontal */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+/* CAMBIO 3: Mayor espacio interno en las tarjetas */
+.card-body {
+  padding: 2rem 2.5rem;
+}
+
+
+
+.card-body .subtopic-layout {
+  /* Resetea el padding para que el card-body lo controle */
+  padding: 1.5rem 0; 
+}
+
+.card-body .subtopic-layout:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.subtopic-text h3, .content h3 {
+  color: var(--text-primary); 
+  font-weight: 600;
+  font-size: clamp(20px, 2.5vw, 22px); 
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.subtopic-image {
+  /* Añadimos un espacio arriba para separar la imagen del texto */
+  margin-top: 1.5rem;
+}
+
+.subtopic-text p, .subtopic-text li, .content p, .content li {
+  font-size: clamp(16px, 1.8vw, 18px); 
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+.subtopic-text {
+  /* El texto se alinea a la izquierda por defecto, lo que es bueno para la lectura */
+  text-align: left;
+}
+
+.subtopic-layout {
+  /* Ya no usamos grid, ahora es un bloque normal */
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.subtopic-image img {
+  max-width: 450px; /* Puedes ajustar este valor si la quieres más grande o pequeña */
+  height: auto;
+  display: block; /* Necesario para que el margen automático funcione */
+  margin-left: auto;  /* Centra la imagen horizontalmente */
+  margin-right: auto; /* Centra la imagen horizontalmente */
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.subtopic-layout.reversed {
+  direction: rtl;
+}
+
+.subtopic-layout.reversed .subtopic-text,
+.subtopic-layout.reversed .subtopic-image {
+  direction: ltr;
+}
+
+/* ======== Botón "Volver Arriba" (sin cambios) ======== */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #1e4bb1;
+  transform: scale(1.1);
+}
+
+/* ======== DISEÑO RESPONSIVO (sin cambios) ======== */
+@media (max-width: 768px) {
+  .brand h1 {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .topnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #1d2a39;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .topnav.is-active {
+    transform: translateX(0);
+  }
+  .topnav > ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 5rem;
+  }
+  .topnav li {
+    width: 100%;
+    text-align: center;
+  }
+  .dropdown-content {
+    position: static;
+    display: none;
+    background: rgba(255,255,255,0.05);
+    box-shadow: none;
+    border-radius: 0;
+    min-width: auto;
+    border: none;
+    margin-top: .5rem;
+  }
+  .dropdown-content a {
+    color: #ccc;
+    font-size: 0.9em;
+  }
+  .hamburger-menu.is-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-menu.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .card-header {
+    padding: 1rem 1.5rem;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+  .subtopic-layout,
+  .subtopic-layout.reversed {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+}
+/* ================================================= */
+/* ==== ESTILOS PARA LA LISTA DE REFERENCIAS ==== */
+/* ================================================= */
+
+.references-list {
+  list-style: none; /* Quita los puntos de la lista */
+  padding-left: 0;
+}
+
+.references-list li {
+  padding-bottom: 1.5rem; /* Espacio entre el texto y la línea */
+  margin-bottom: 1.5rem; /* Espacio entre la línea y la siguiente referencia */
+  border-bottom: 1px solid var(--border-color); /* La línea divisora */
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* Regla para que la última referencia NO tenga una línea debajo */
+.references-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Estilo para los enlaces dentro de las referencias */
+.references-list a {
+  display: block; /* Hace que el enlace ocupe su propia línea */
+  margin-top: 0.5rem; /* Pequeño espacio sobre el enlace */
+  color: var(--accent);
+  word-wrap: break-word; /* Evita que enlaces largos rompan el diseño */
+}
+/* ================================================= */
+/* ======== PIE DE PÁGINA (FOOTER) ======== */
+/* ================================================= */
+.site-footer {
+  background-color: #1d2a39; 
+  color: rgba(255, 255, 255, 0.8); 
+  text-align: center; /* <-- ESTA LÍNEA CENTRA EL TEXTO */
+  padding: 2rem 1rem;
+  margin-top: 3rem; 
+  font-size: 0.9em; 
+}
+
+/* Para quitar el espacio extra que los párrafos a veces añaden */
+.site-footer p {
+  margin: 0;
+}

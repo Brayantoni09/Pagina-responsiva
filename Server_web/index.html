@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina responsiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <div class="brand">
+      <div class="logo">PM</div>
+      <h1>Programación Movil</h1>
+    </div>
+    <button class="hamburger-menu" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="topnav">
+      <ul>
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Temario ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="#tema1" class="nav-link">1. Ecosistema móvil</a></li>
+            <li><a href="#tema2" class="nav-link">2. Sistemas operativos</a></li>
+            <li><a href="#tema3" class="nav-link">3. Lenguajes y entornos</a></li>
+            <li><a href="#tema4" class="nav-link">4. Arquitecturas</a></li>
+            <li><a href="#tema5" class="nav-link">5. Diseño responsivo</a></li>
+            <li><a href="#tema6" class="nav-link">6. Accesibilidad</a></li>
+            <li><a href="#tema7" class="nav-link">7. Seguridad</a></li>
+            <li><a href="#tema8" class="nav-link">8. Datos y conectividad</a></li>
+            <li><a href="#tema9" class="nav-link">9. Ciclo de vida</a></li>
+          </ul>
+        </li>
+        <li><a href="#referencias" class="nav-link">Referencias</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <section id="inicio" class="card">
+    <header class="card-header"><h2>Inicio</h2></header>
+    <div class="card-body single-column">
+      <div class="content">
+        <h3>Objetivo</h3>
+        <p>Brindar a estudiantes una comprensión del proceso de desarrollo de aplicaciones móviles, abarcando desde la planificación inicial hasta la publicación en tiendas digitales.</p>
+        <h3>Alcance</h3>
+        <p>Dirigido a alumnos interesados en el desarrollo de aplicaciones móviles, proporcionándoles información esencial para comprender las herramientas, metodologías y etapas que conforman el proceso completo.</p>
+        <h3>Mapa del sitio</h3>
+        <ul>
+            <li>Inicio.</li>
+            <li> Temario.</li>
+            <li>Referencias. </li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+<!-- ================= PANORAMA DEL ECOSISTEMA MÓVIL =========== -->
+  <section id="tema1" class="card content-section">
+    <header class="card-header"><h2>Panorama del ecosistema móvil</h2></header>
+        <div class="card-body single-column">
+            <div class="content">
+                <h3>Tipos de apps: nativas, híbridas, PWA</h3>
+                <h4>Nativas</h4>
+                <p>Las aplicaciones nativas son todas aquellas que están desarrolladas para un sistema operativo en particular como Android o iOS, estas cuentan con una gran ventaja ya que son más visibles y cuentan con más credibilidad dentro del desarrollo móvil por su desarrollo específico. Gracias a esto cuentan cada una con su propia distribución en tienda como Google Play Store y App Store lo que también garantiza el fácil acceso a funcionalidades avanzadas como la cámara, GPS, sensores de movimiento y autenticación biométrica.</p>
+                <p><strong>Ventajas de apps nativas:</strong></p>
+                <ul>
+                    <li>Mayor rendimiento</li>
+                    <li>Mayor seguridad y estabilidad</li>
+                    <li>Acceso total a funcionalidades del dispositivo</li>
+                </ul>
+                <p><strong>Desventajas de apps nativas:</strong></p>
+                <ul>
+                    <li>Requisitos de aprobación de tiendas de apps</li>
+                    <li>Mayor coste de desarrollo</li>
+                    <li>Mantenimiento separado para cada plataforma</li>
+                </ul>
+
+                <h4>Híbridas</h4>
+                <p>Las aplicaciones híbridas son una combinación de aplicaciones nativas y aplicaciones web ya que su núcleo se basa en HTML, CSS y JavaScript. Esto permite que con un solo código fuente se pueda adaptar a Android y iOS mediante la utilización de frameworks como React Native, Flutter, Ionic y Apache Cordova. El funcionamiento de una app híbrida se basa en la capacidad de los frameworks de renderizar la interfaz de usuario dentro de un contenedor nativo, lo que les permite acceder a ciertas funcionalidades del dispositivo. Sin embargo, su rendimiento y acceso a hardware específico dependen en gran medida de la optimización del código y de las API nativas disponibles.</p>
+                <p><strong>Ventajas de apps híbridas:</strong></p>
+                <img src="img/tema1.jpg" alt="Aplicaciones Hibridas" class="tema-img"><!--imagennnnn-->
+                <ul>
+                    <li>Desarrollo más rápido y económico</li>
+                    <li>Un solo código para múltiples plataformas</li>
+                    <li>Compatibilidad con tecnologías web</li>
+                </ul>
+                <p><strong>Desventajas de apps híbridas:</strong></p>
+                <ul>
+                    <li>Menor rendimiento en comparación con las nativas</li>
+                    <li>Acceso limitado a hardware</li>
+                    <li>Mayor dependencia de frameworks de terceros</li>
+                </ul>
+
+                <h4>PWA</h4>
+                <p>Progressive web app es una autenticidad ya que permite la combinación de sitios web y aplicaciones móviles las cuales son ejecutadas en navegadores como Google Chrome, Safari y Firefox lo cual facilita el acceso a ellas sin la necesidad de descargar los contenidos como lo son en las apps anteriores (Nativas y Híbridas).</p>
+                <p><strong>Ventajas de PWA:</strong></p>
+                <ul>
+                    <li>No requiere de instalación</li>
+                    <li>Menor coste de desarrollo</li>
+                    <li>Compatibilidad con cualquier navegador</li>
+                </ul>
+                <p><strong>Desventajas de PWA:</strong></p>
+                <ul>
+                    <li>Menor acceso a funcionalidades del hardware</li>
+                    <li>Dependencia de los navegadores</li>
+                </ul>
+
+                <h3>Casos de uso comunes en organizaciones</h3>
+                <p>Tomando en cuenta que el uso de estas depende en gran parte de cuál será el uso que se dará y lo que busca la organización al implementar estos tipos de tecnologías de apps. Por ejemplo, si una empresa lo que busca es un monitoreo interno lo más conveniente para esto es app híbrida, por su gran manejo en cualquier dispositivo. Ya que si busca una manera de emplear marketing lo más conveniente es el uso de PWA, ya que el cliente o cualquier persona solo tiene acceso por un navegador a las ofertas que presenta la empresa, lo cual les permite tener una mejor seguridad.</p>
+                <img src="img/tema1b.png" alt="Casos comunes" class="tema-img"><!--imagennnnn-->
+            </div>
+        </div>
+    </section>
+
+<!-- ========================= SISTEMAS OPERATIVOS MÓVILES ========================= -->
+  <section id="tema2" class="card content-section">
+      <header class="card-header"><h2>Sistemas operativos móviles</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+      <h3>Android e iOS</h3>
+
+      <h4>Android</h4>
+      <p>
+        Es el sistema operativo móvil más popular en la actualidad, ya que ha resaltado mucho
+        en sus funciones y las grandes cantidades de apps a las que tienes acceso. Este es propiedad de
+        Google lo cual permite una mayor compatibilidad con muchas marcas de dispositivos móviles y
+        dependencias de las mismas compañías gracias a su fuente que es de código abierto.
+      </p>
+
+      <h4>iOS</h4>
+      <p>
+        Este es un sistema operativo diseñado únicamente para dispositivos de Apple, lo cual les
+        permite un gran rendimiento en sus aplicaciones por el acceso a su hardware. De otra manera,
+        este no comparte su núcleo con otras marcas de dispositivos móviles lo que también los convierte
+        en una empresa con alto nivel de seguridad.
+      </p>
+      <img src="img/tema2.jpg" alt="Android y iOS" class="tema-img"><!--imagennnnn-->
+      <h3>Ciclo de vida de una app</h3>
+      <p>
+        Esto inicia con la idea de satisfacer un área de trabajo de cualquier tipo, si no existe la idea
+        de mejorar algún sistema una aplicación nunca será creada. Por lo tanto al tener la idea es
+        importante el llevarla a cabo la cual debe seguir una serie de etapas para un desarrollo exitoso,
+        el cual comienza con:
+      </p>
+
+      <ul>
+        <li><strong>Planificación:</strong> Se definen ideas, objetivos y se evalúa la viabilidad técnica.
+          Se documentan requisitos y se asignan recursos.</li>
+        <li><strong>Diseño y prototipado:</strong> Se crean maquetas y prototipos interactivos. Se recopila
+          retroalimentación para mejorar el diseño.</li>
+        <li><strong>Desarrollo e implementación:</strong> Se programa la app, tanto en frontend como backend.
+          Se integran funcionalidades según la arquitectura definida.</li>
+        <li><strong>Pruebas y control de calidad:</strong> Se realizan pruebas unitarias, de integración y beta.
+          Se corrigen errores y se optimiza el rendimiento.</li>
+        <li><strong>Lanzamiento:</strong> Se publica la app en tiendas digitales. Se aplican estrategias de marketing
+          para atraer usuarios.</li>
+        <li><strong>Mantenimiento y actualizaciones:</strong> Se monitorea el uso, se corrigen fallos y se agregan
+          mejoras. Se adapta la app a nuevas necesidades y tecnologías.</li>
+      </ul>
+      <img src="img/tema2b.jpg" alt="Ciclo de vida de una app" class="tema-img"><!--imagennnnn-->
+
+      
+    </div>
+  </div>
+    </section>
+
+<!-- ========================= TEMA 3 - LENGUAJES Y ENTORNOS DE DESARROLL========================= -->
+  <section id="tema3" class="card content-section">
+    <header class="card-header"><h2>Lenguajes y entornos de desarrollo</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+        
+        <h3>Kotlin / Android Studio, Dart / Flutter</h3>
+        <p><strong>Kotlin.</strong> Kotlin es un lenguaje de programación de código abierto diseñado para ser simple, elegante y compatible con Java. Se usa principalmente para desarrollar apps Android, aplicaciones web (junto con JavaScript), y sistemas de servidor. Su sintaxis es parecida a Java y C++, pero más concisa y legible. Además, admite programación funcional y reactiva, lo que lo hace versátil y fácil de aprender para quienes ya conocen Java.</p>
+
+        <p><strong>Dart.</strong> Dart es un lenguaje de programación eficiente y versátil, ideal para crear aplicaciones móviles, web y de escritorio con alto rendimiento y mantenimiento sencillo. Su evolución ha buscado simplificar el desarrollo de interfaces modernas sin perder potencia. Este artículo presenta sus características, historia y ventajas, destacando por qué Dart es una alternativa robusta para quienes buscan mejorar productividad y adaptarse a las demandas actuales del mercado.</p>
+        <img src="img/tema3.png" alt="Lenguajes y entornos" class="tema-img"><!--imagennnnn-->
+    
+        
+        <h3>Emuladores y depuración básica</h3>
+        <p><strong>Emulador.</strong> Un emulador es un programa que simula el funcionamiento de otro dispositivo o sistema operativo dentro de tu computadora.</p>
+        <p><strong>Depuración básica.</strong> Es el proceso de encontrar y corregir errores (bugs) en una aplicación mientras se está desarrollando. Es como mirar “por dentro” del código para entender qué está fallando y por qué.</p>
+        <img src="img/tema3b.jpg" alt="Emuladores y depuración" class="tema-img"><!--imagennnnn-->
+    
+     </div>
+  </div>
+    </section>
+
+<!-- ========================= ARQUITECTURAS Y PARADIGMAS ========================= -->
+  <section id="tema4" class="card content-section">
+    <header class="card-header"><h2>Arquitecturas y paradigmas</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+
+      <img src="img/tema4.png" alt="Arquitecturas de software" class="tema-img"><!--imagennnnn-->
+
+      <h3>MVC / MVP / MVVM (idea general) y programación event-driven / reactiva</h3>
+
+      <p><strong>MVC (Modelo-Vista-Controlador).</strong> Este patrón divide la aplicación en tres partes:</p>
+      <ul>
+        <li>El <strong>modelo</strong> gestiona los datos y la lógica del negocio.</li>
+        <li>La <strong>vista</strong> muestra la interfaz al usuario.</li>
+        <li>El <strong>controlador</strong> actúa como intermediario, recibiendo las acciones del usuario desde la vista, actualizando el modelo y reflejando los cambios en la vista.</li>
+      </ul>
+
+      <p><strong>MVP (Modelo-Vista-Presentador).</strong> Es una evolución del MVC que mejora la separación entre la vista y el modelo:</p>
+      <ul>
+        <li>El modelo sigue siendo responsable de los datos.</li>
+        <li>La vista es más pasiva y se limita a mostrar información.</li>
+        <li>El presentador toma el control total de la lógica: recibe eventos de la vista, consulta el modelo y actualiza la vista.</li>
+      </ul>
+
+      <p><strong>MVVM (Modelo-Vista-ViewModel).</strong> Este patrón se enfoca en simplificar el desarrollo de interfaces modernas:</p>
+      <ul>
+        <li>El modelo gestiona los datos.</li>
+        <li>La vista muestra la interfaz, usualmente definida en lenguajes de marcado como XML o XAML.</li>
+        <li>El ViewModel conecta ambos mediante enlaces de datos (data binding), transformando la información del modelo en algo que la vista pueda mostrar fácilmente.</li>
+      </ul>
+
+      <p><strong>Programación event-driven.</strong> Es un paradigma donde el flujo del programa está determinado por eventos: clics, entradas de usuario, señales del sistema, etc.  
+      Responde a eventos puntuales y ejecuta funciones específicas.</p>
+
+      <p><strong>Programación reactiva.</strong> Es un paradigma más avanzado que trabaja con flujos de datos asíncronos (streams) y propagación automática de cambios.  
+      Gestiona flujos continuos de datos y actualiza automáticamente los componentes que dependen de ellos.</p>
+
+      
+
+      <h3>Capas lógicas típicas (UI, dominio, datos) y buenas prácticas de separación</h3>
+      <p><strong>Capas lógicas típicas:</strong></p>
+      <ul>
+        <li><strong>Capa de presentación (UI – User Interface):</strong> Parte visible para el usuario, encargada de mostrar la información y recibir interacciones (clics, formularios, gestos).</li>
+        <li><strong>Capa de dominio (Lógica de negocio):</strong> Contiene las reglas, procesos y decisiones que definen cómo funciona el sistema. Debe ser independiente de la interfaz y de la base de datos.</li>
+        <li><strong>Capa de datos (Data Layer):</strong> Gestiona el acceso a fuentes externas como bases de datos, APIs o archivos.</li>
+      </ul>
+      <img src="img/tema4b.png" alt="Capas lógicas" class="tema-img"><!--imagennnnn-->
+      <p><strong>Buenas prácticas de separación:</strong></p>
+      <ul>
+        <li><strong>Responsabilidad única:</strong> Cada capa debe tener un propósito claro.</li>
+        <li><strong>Comunicación dirigida:</strong> Las capas deben comunicarse de forma ordenada.</li>
+        <li><strong>Independencia tecnológica:</strong> La lógica de negocio debe funcionar sin depender de frameworks o librerías específicas.</li>
+        <li><strong>Testabilidad:</strong> Separar bien las capas facilita escribir pruebas unitarias para cada parte del sistema.</li>
+        <li><strong>Reutilización:</strong> Una lógica bien aislada puede usarse en diferentes interfaces (web, móvil, escritorio) sin duplicar código.</li>
+      </ul>
+
+    </div>
+  </div>
+    </section>
+
+<!-- ========================= DISEÑO RESPONSIVO PARA LA WEB ========================= -->
+  <section id="tema5" class="card content-section">
+    <header class="card-header"><h2>Diseño responsivo para la web (porque la evidencia es un sitio)</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+
+      <p>
+        El diseño responsivo busca que un sitio web se adapte fluidamente a cualquier tamaño de pantalla,
+        desde móviles hasta monitores grandes.
+      </p>
+      <img src="img/tema5.jpg" alt="Diseño responsivo" class="tema-img"><!--imagennnnn-->
+
+      <h3>Mobile-first, media queries, Flexbox/Grid, imágenes responsivas</h3>
+      <ul>
+        <li><strong>Mobile-first:</strong> se diseña primero para pantallas pequeñas y luego se escala hacia dispositivos más grandes.</li>
+        <li><strong>Media queries:</strong> permiten aplicar estilos CSS según el ancho del dispositivo.</li>
+        <li><strong>Flexbox:</strong> sistemas de diseño que organizan elementos de forma flexible y estructurada.</li>
+        <li><strong>Imágenes responsivas:</strong> se ajustan automáticamente al tamaño del contenedor usando <code>max-width: 100%</code> y <code>height: auto</code>.</li>
+      </ul>
+
+      <h3>Patrones de navegación en móvil (tab bar, drawer, menús compactos)</h3>
+      <p>En apps móviles, la navegación debe ser intuitiva y ocupar poco espacio.</p>
+      <ul>
+        <li><strong>Tab bar:</strong> barra inferior con íconos para secciones principales.</li>
+        <li><strong>Drawer:</strong> menú lateral que se desliza, ideal para opciones secundarias.</li>
+        <li><strong>Menús compactos:</strong> como el menú hamburguesa, que agrupa enlaces en un solo ícono.</li>
+      </ul>
+      
+
+     </div>
+ </div>
+    </section>
+
+<!-- ========================= ACCESIBILIDAD Y USABILIDAD ========================= -->
+  <section id="tema6" class="card content-section">
+    <header class="card-header"><h2>Accesibilidad y usabilidad</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+
+      <p>
+        Diseñar para todos significa incluir a personas con discapacidades visuales, cognitivas o motoras.
+        La accesibilidad mejora la experiencia para todos los usuarios y asegura que el contenido sea
+        entendible y navegable.
+      </p>
+
+      <h3>Semántica HTML5, alt en imágenes, jerarquía de encabezados, foco y contraste</h3>
+      <ul>
+        <li><strong>Semántica HTML5:</strong> usar etiquetas como &lt;header&gt;, &lt;main&gt;, &lt;section&gt; mejora la estructura y comprensión.</li>
+        <li><strong>Alt en imágenes:</strong> describe el contenido visual para lectores de pantalla.</li>
+        <li><strong>Jerarquía de encabezados:</strong> usar &lt;h1&gt; a &lt;h6&gt; en orden lógico facilita la navegación.</li>
+        <li><strong>Foco y contraste:</strong> asegurar que los elementos sean visibles y navegables con teclado.</li>
+      </ul>
+      <img src="img/tema6.jpg" alt="Semántica HTML5" class="tema-img"><!--imagennnnn-->
+
+      <h3>Buenas prácticas de texto (legibilidad, tamaño y espaciado en pantallas pequeñas)</h3>
+      <ul>
+        <li><strong>Tamaño mínimo recomendado:</strong> 16px para texto base.</li>
+        <li><strong>Espaciado entre líneas:</strong> usar <code>line-height</code> de 1.5 a 1.6 mejora la lectura.</li>
+        <li><strong>Tipografía clara:</strong> fuentes como Arial, Roboto o Open Sans son ideales.</li>
+        <li><strong>Uso de clamp():</strong> permite que el tamaño del texto se ajuste dinámicamente.</li>
+      </ul>
+      <img src="img/tema6b.jpg" alt="Buenas practicas" class="tema-img"><!--imagennnnn-->
+
+    </div>
+  </div>
+    </section>
+
+<!-- ========================= SEGURIDAD Y PRIVACIDAD ========================= -->
+  <section id="tema7" class="card content-section">
+     <header class="card-header"><h2>Seguridad y privacidad (alto nivel)</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+
+      <p>
+        Las apps móviles deben proteger los datos del usuario desde el diseño, aplicando prácticas seguras
+        y cumpliendo con las normativas de cada país para garantizar la privacidad digital.
+      </p>
+
+      <h3>Permisos en apps móviles (qué son y ejemplos), HTTPS, manejo responsable de datos</h3>
+      <ul>
+        <li><strong>Permisos:</strong> autorizaciones que la app solicita (ubicación, cámara, contactos).</li>
+        <li><strong>HTTPS:</strong> protocolo seguro para transmitir datos cifrados.</li>
+        <li><strong>Manejo responsable de datos:</strong> recolectar solo lo necesario, informar al usuario y permitir revocar permisos.</li>
+      </ul>
+      <img src="img/tema7.jpg" alt="permisos" class="tema-img"><!--imagennnnn-->
+
+      <h3>Mención de normativa de datos personales en México (enfoque divulgativo)</h3>
+      <p>México cuenta con leyes robustas para proteger la privacidad digital:</p>
+      <ul>
+        <li><strong>LFPDPPP:</strong> regula el tratamiento de datos por empresas privadas.</li>
+        <li><strong>LGPDPPSO:</strong> aplica a entidades públicas.</li>
+        <li><strong>Derechos ARCO:</strong> acceso, rectificación, cancelación y oposición.</li>
+        <li><strong>Aviso de privacidad:</strong> documento obligatorio que informa al usuario cómo se usarán sus datos.</li>
+      </ul>
+      <img src="img/tema7b.png" alt="mencion de normativas" class="tema-img"><!--imagennnnn-->
+
+    </div>
+  </div>
+    </section>
+
+<!-- ========================= DATOS Y CONECTIVIDAD ========================= -->
+  <section id="tema8" class="card content-section">
+    <header class="card-header"><h2>Datos y conectividad (alto nivel)</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+
+      <p>
+        En el desarrollo móvil moderno, los datos y la conectividad son el núcleo de la experiencia del usuario.
+        Ya no basta con que una app funcione; debe hacerlo de forma ágil, segura y resiliente,
+        incluso en condiciones de red limitadas.
+      </p>
+
+      <h3>APIs REST/JSON y almacenamiento local (nociones: caché, offline-first)</h3>
+      <ul>
+        <li><strong>APIs REST/JSON:</strong> permiten intercambiar datos entre cliente y servidor de forma estructurada.</li>
+        <li><strong>Almacenamiento local:</strong> guardar datos en el dispositivo (localStorage, IndexedDB, Cache API).</li>
+        <li><strong>Offline-first:</strong> diseño que prioriza la funcionalidad sin conexión, usando Service Workers y caché.</li>
+      </ul>
+      <img src="img/tema8.jpg" alt="APIS" class="tema-img"><!--imagennnnn-->
+
+      <h3>Consideraciones de rendimiento y batería en móvil (idea general)</h3>
+      <ul>
+        <li>Reducir procesos en segundo plano.</li>
+        <li>Limitar servicios como GPS o cámara cuando no se usan.</li>
+        <li>Usar modos de ahorro de energía.</li>
+        <li>Evitar sobrecalentamiento y carga excesiva.</li>
+      </ul>
+      <img src="img/tema8b.jpg" alt="Rendimiento de bateria" class="tema-img"><!--imagennnnn-->
+
+    </div>
+  </div>
+    </section>
+
+<!-- ========================= CICLO DE VIDA DEL DESARROLLO ========================= -->
+  <section id="tema9" class="card content-section">
+    <header class="card-header"><h2>Ciclo de vida del desarrollo</h2></header>
+  <div class="card-body single-column">
+    <div class="content">
+
+      <p>
+        El desarrollo de una app no termina cuando el código compila. Hay procesos esenciales
+        que garantizan calidad, seguridad y distribución efectiva. Aquí se explican tres pilares fundamentales:
+      </p>
+
+      <h3>Control de versiones (Git), pruebas básicas en emulador/dispositivo, empaquetado y publicación</h3>
+
+      <p><strong>Control de versiones (Git).</strong>  
+        Git es como una “línea del tiempo” para tu código.
+      </p>
+      <ul>
+        <li>Permite guardar versiones, colaborar sin conflictos y revertir errores fácilmente.</li>
+        <li>Ideal para trabajar en equipo: cada desarrollador puede crear su propia rama (<code>git branch</code>) y luego unirla (<code>git merge</code>) cuando esté lista.</li>
+      </ul>
+
+      <p><strong>Pruebas básicas en emulador y dispositivo.</strong></p>
+      <ul>
+        <li><strong>Emulador:</strong> simula un dispositivo móvil en tu computadora y permite probar rápidamente en diferentes versiones de Android/iOS, resoluciones y condiciones de red.</li>
+        <li><strong>Dispositivo físico:</strong> muestra el comportamiento real de la app y es esencial para detectar errores que el emulador no reproduce bien.</li>
+      </ul>
+
+      <p><strong>Empaquetado y publicación.</strong>  
+        Una vez superadas las pruebas, se prepara el paquete final para su distribución en tiendas digitales (Google Play, App Store). Este proceso incluye la firma de la app, optimización de recursos y carga en las plataformas correspondientes.
+      </p>
+      <img src="img/tema9.png" alt="Git" class="tema-img"><!--imagennnnn-->
+
+    </div>
+  </div>
+    </section>
+
+
+        <section id="referencias" class="card content-section">
+    <header class="card-header">
+        <h2>Referencias</h2>
+    </header>
+    <div class="card-body">
+        <div class="content">
+        <ul class="references-list">
+            
+            <li>
+            Adeva, R. (2025, 27 marzo). <em>Qué es Android: detalles del sistema operativo de Google.</em>
+            <a href="https://www.adslzone.net/reportajes/software/que-es-android/" target="_blank">
+                https://www.adslzone.net/reportajes/software/que-es-android/
+            </a>
+            </li>
+            
+            <li>
+            ¿Qué es iOS? Todo lo que necesita saber. (2024, 16 enero).
+            <a href="https://softwarelab.org/es/blog/que-es-ios/" target="_blank">
+                https://softwarelab.org/es/blog/que-es-ios/
+            </a>
+            </li>
+
+            <li>
+            Lenguajes de programación. (2023, 12 julio). <em>Kotlin</em>.
+            <a href="https://lenguajesdeprogramacion.net/kotlin/" target="_blank">
+                https://lenguajesdeprogramacion.net/kotlin/
+            </a>
+            </li>
+
+            <li>
+            De Imagina, E. (2024, 23 agosto). <em>Lenguaje de programación DART</em>. Imagina Formación.
+            <a href="https://imaginaformacion.com/tutoriales/aprende-dart-tutorial-de-primeros-pasos" target="_blank">
+                https://imaginaformacion.com/tutoriales/aprende-dart-tutorial-de-primeros-pasos
+            </a>
+            </li>
+
+            <li>
+            Jimenez, M. (2025, 27 mayo). <em>Los mejores IDEs para programar desde tu móvil Android en 2025</em>. AndroidAyuda.
+            <a href="https://androidayuda.com/android/general/los-mejores-ides-para-programar-desde-tu-movil-android-en-2025-guia-completa-y-comparativa/" target="_blank">
+                https://androidayuda.com/android/general/los-mejores-ides-para-programar-desde-tu-movil-android-en-2025-guia-completa-y-comparativa/
+            </a>
+            </li>
+            
+            <li>
+            Garcia, C. (2023, 28 agosto). <em>Patrones arquitectónicos: explicación de MVC, MVP y MVVM</em>. AppMaster.
+            <a href="https://appmaster.io/es/blog/patrones-arquitectonicos-mvc-mvp-y-mvvm" target="_blank">
+                https://appmaster.io/es/blog/patrones-arquitectonicos-mvc-mvp-y-mvvm
+            </a>
+            </li>
+            
+            <li>
+            Codigo. (2022, 4 abril). <em>Programación reactiva</em>. Codigo6.
+            <a href="https://www.codigo6.com/programacion-reactiva-explicado-de-forma-clara-y-confiable/" target="_blank">
+                https://www.codigo6.com/programacion-reactiva-explicado-de-forma-clara-y-confiable/
+            </a>
+            </li>
+            
+            <li>
+            Kaboom. (2014, 25 agosto). <em>Programación orientada a eventos</em>. Kaboom Eventos.
+            <a href="https://kaboomeventos.com.ar/event-driven-programming-examples/" target="_blank">
+                https://kaboomeventos.com.ar/event-driven-programming-examples/
+            </a>
+            </li>
+
+            <li>
+            Guía de arquitectura de apps. (s. f.). <em>Android Developers</em>.
+            <a href="https://developer.android.com/topic/architecture?hl=es-419" target="_blank">
+                https://developer.android.com/topic/architecture?hl=es-419
+            </a>
+            </li>
+
+            <li>
+            Kv. (2025, 28 junio). <em>Implementación de un diseño responsivo con Flexbox y CSS Grid</em>.
+            <a href="https://platzi.com/blog/como-implementar-un-diseno-responsivo-con-flexbox-y-css-grid/" target="_blank">
+                https://platzi.com/blog/como-implementar-un-diseno-responsivo-con-flexbox-y-css-grid/
+            </a>
+            </li>
+
+            <li>
+            Diseños y patrones de navegación. (s. f.). <em>Android Developers</em>.
+            <a href="https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-patterns?hl=es-419" target="_blank">
+                https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-patterns?hl=es-419
+            </a>
+            </li>
+
+            <li>
+            <em>HTML: Una buena base para la accesibilidad</em>. (s. f.). MDN Web Docs.
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Accessibility/HTML" target="_blank">
+                https://developer.mozilla.org/es/docs/Learn_web_development/Core/Accessibility/HTML
+            </a>
+            </li>
+
+            <li>
+            Academy, C. (2025, 3 marzo). <em>Tipografía Escalable y Flexible | Responsive Design en CSS</em>. Chuck’s Academy.
+            <a href="https://www.chucksacademy.com/es/topic/responsive-design/typography" target="_blank">
+                https://www.chucksacademy.com/es/topic/responsive-design/typography
+            </a>
+            </li>
+
+            <li>
+            <em>Comprende las prácticas de privacidad y seguridad de las apps</em>. (s. f.). Google Play Help.
+            <a href="https://support.google.com/googleplay/answer/11416267?hl=es" target="_blank">
+                https://support.google.com/googleplay/answer/11416267?hl=es
+            </a>
+            </li>
+
+            <li>
+            Isaac. (2025, 29 mayo). <em>Permisos de Aplicaciones Android y Privacidad</em>. Todo Android.
+            <a href="https://www.todoandroid.es/app-privacidad-cuales-son-mejores/" target="_blank">
+                https://www.todoandroid.es/app-privacidad-cuales-son-mejores/
+            </a>
+            </li>
+            
+            <li>
+            <em>Offline First: Service Workers y Cache Storage</em>. (s. f.). PWA Experts I/O.
+            <a href="https://pwaexperts.io/tutoriales/offline-first-service-workers-cache-storage-upup-js" target="_blank">
+                https://pwaexperts.io/tutoriales/offline-first-service-workers-cache-storage-upup-js
+            </a>
+            </li>
+
+            <li>
+            <em>Optimizar la duración de la batería de un dispositivo Android</em>. (2023, 21 enero).
+            <a href="https://support.google.com/android/answer/7664692?hl=es" target="_blank">
+                https://support.google.com/android/answer/7664692?hl=es
+            </a>
+            </li>
+
+            <li>
+            A-A-Ron. (s. f.). <em>Administración del ciclo de vida de los proyectos en GitHub</em>. Microsoft Learn.
+            <a href="https://learn.microsoft.com/es-es/training/paths/manage-project-lifecycle-github/" target="_blank">
+                https://learn.microsoft.com/es-es/training/paths/manage-project-lifecycle-github/
+            </a>
+            </li>
+
+            <li>
+            Jose. (2024, 16 julio). <em>Descifrar las 7 diferentes etapas del ciclo de desarrollo de aplicaciones móviles</em>. Juice Studio.
+            <a href="https://juice-studio.com/descifrar-las-7-diferentes-etapas-del-ciclo-de-desarrollo-de-aplicaciones-moviles/" target="_blank">
+                https://juice-studio.com/descifrar-las-7-diferentes-etapas-del-ciclo-de-desarrollo-de-aplicaciones-moviles/
+            </a>
+            </li>
+
+        </ul>
+        </div>
+    </div>
+    </section>
+
+
+</main>
+<footer class="site-footer">
+  <p>&copy; 2025 | Esta página fue creada con fines exclusivamente educativos.</p>
+</footer>
+
+<button id="scrollToTopBtn" title="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
