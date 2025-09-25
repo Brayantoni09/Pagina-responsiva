@@ -54,6 +54,6 @@ Chuck’s Academy. (2025). Tipografía Escalable y Flexible | Responsive Design 
 https://www.chucksacademy.com/es/topic/responsive-design/typography
 
 ---
-###Este proyecto fue desarrollado con fines educativos por: Bryan Antonio Garcia. 
-###se permite la utilizacion con los mismo fines.
+### Este proyecto fue desarrollado con fines educativos por: Bryan Antonio Garcia. 
+### se permite la utilizacion con los mismo fines.
 
